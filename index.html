@@ -1,16 +1,27 @@
 <!DOCTYPE html>
 <html>
 <style>
-	@font-fact {
-		font-family: helvHead;
-		src: url(fonts/helvHead.ttf);
+	@font-face {
+		font-family: 'helvHead';
+		src: 	url('fonts/helvHead.woff') format('woff'),
+			url('fonts/helvHead.ttf') format('truetype');
+	}
+	@font-face {
+		font-family: 'helvText';
+		src:	url('fonts/helvText.woff') format('woff'),
+			url('fonts/helvHead.ttf') format('truetype');
 	}
 	h1 {
 		font-family: helvHead;
 	}
+	p {
+		font-family: helvText;
+	}
+</style>
 <body>
 
 <h1>Welcome 2 my page</h1>
+<p>Welcome 3 my page.....</p>
 
 </body>
 </html>
