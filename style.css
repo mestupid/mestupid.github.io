@@ -56,6 +56,12 @@ body:has(#rightbox:hover)::before {
 	border: 1px solid white;
 	display:flex;
 	align-items: center;
+	text-decoration: none;
+	color: inherit;
+	cursor: pointer;
+}
+#leftbox:hover p {
+	text-decoration: underline;
 }
 #rightbox {
 	width: 20%;
@@ -64,6 +70,12 @@ body:has(#rightbox:hover)::before {
 	border: 1px solid white;
 	display:flex;
 	align-items: center;
+	text-decoration: none;
+	color: inherit;
+	cursor: pointer;
+}
+#rightbox:hover p {
+	text-decoration: underline;
 }
 #title {
 	position: fixed;
