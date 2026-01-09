@@ -30,7 +30,7 @@ body::before {
     background: linear-gradient(90deg, #ffffff 50%, #000000 50%);
     background-size: 200% 100%;
     background-position: 50% 0;
-    transition: background-position 0.01s ease;
+    transition: background-position 0.4s ease;
     z-index: -1;
 }
 body:has(#leftbox:hover)::before {
