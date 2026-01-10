@@ -5,6 +5,21 @@
 </head>
 <body>
 
+<div id="popup" class="popup">
+  <div class="popup-content">
+    <p>Are you a recruiter?</p>
+    <p>If so, you'll want to look at my projects tab!</p>
+    <button id="greenbutton" class="button" onclick="closePopup()">OK</button>
+    <button id="redbutton" class="button" onclick="closePopup()">OK, but in red</button>
+  </div>
+</div>
+
+<script>
+function closePopup() {
+  document.getElementById("popup").style.display = "none";
+}
+</script>
+
   <h1>Welcome 2 my page.</h1>
   <p>
     Here's some text 
