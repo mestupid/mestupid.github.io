@@ -27,3 +27,23 @@ html, body {
 	background-color: #00FF00;
     cursor:pointer;
 }
+.about {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-evenly;
+	padding: 20px;
+}
+.about-col-left {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: flex-start;
+	padding: 10px;
+}
+#about-image {
+	padding: 10px, 10px, 10px, 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
