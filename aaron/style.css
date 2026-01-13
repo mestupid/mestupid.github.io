@@ -1,3 +1,6 @@
+html, body {
+    font-family: "EB Garamond", Garamond, serif;
+}
 .popup {
   position: fixed;
   inset: 0;
