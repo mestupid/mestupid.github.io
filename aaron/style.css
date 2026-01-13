@@ -27,12 +27,16 @@ html, body {
 	background-color: #00FF00;
     cursor:pointer;
 }
+.page {
+	height: 100vh;
+}
 .about {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 	justify-content: space-evenly;
 	padding: 20px;
+	height: 4fr;
 }
 .about-col-left {
 	display: flex;
@@ -40,8 +44,6 @@ html, body {
 	justify-content: space-evenly;
 	align-items: flex-start;
 	padding: 40px;
-}
-.about-text{
 	width: 60vw;
 }
 #about-image {
@@ -49,4 +51,10 @@ html, body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	max-width: 100%;
+	height: auto;
+	width: 40vw;
+}
+.categories {
+	height: 6fr;
 }
