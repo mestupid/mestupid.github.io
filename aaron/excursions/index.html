@@ -1,1 +1,151 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Blog</title>
+
+  <!-- EB Garamond -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* GLOBAL */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "EB Garamond", serif;
+  background: #fff;
+  color: #111;
+}
+
+/* ABOUT SECTION */
+.about {
+  display: flex;
+  align-items: center;
+  padding: 4rem 6rem;
+  gap: 4rem;
+}
+
+.about-text {
+  flex: 2;
+}
+
+.about-text h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.about-text p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.about-image {
+  flex: 1;
+}
+
+.about-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* SLITS SECTION */
+.slits {
+  display: flex;
+  flex-direction: column;
+}
+
+.slit {
+  position: relative;
+  height: 180px;
+  background-size: cover;
+  background-position: center;
+  text-decoration: none;
+  overflow: hidden;
+}
+
+/* dark overlay */
+.slit::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  transition: background 0.3s;
+}
+
+.slit span {
+  position: absolute;
+  left: 3rem;
+  bottom: 2rem;
+  font-size: 2.2rem;
+  color: white;
+  z-index: 1;
+}
+
+/* hover effect */
+.slit:hover::before {
+  background: rgba(0,0,0,0.25);
+}
+
+.slit:hover span {
+  text-decoration: underline;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .about {
+    flex-direction: column;
+    padding: 3rem 2rem;
+  }
+
+  .slit {
+    height: 140px;
+  }
+}
+
+  </style>
+</head>
+<body>
+
+  <!-- ABOUT SECTION -->
+  <section class="about">
+    <div class="about-text">
+      <h1>About Me</h1>
+      <p>
+        I write about technology, design, and engineering.
+        This site is a collection of long-form essays, projects,
+        and thoughts.
+      </p>
+    </div>
+
+    <div class="about-image">
+      <img src="images/me.jpg" alt="Portrait">
+    </div>
+  </section>
+
+  <!-- CATEGORY SLITS -->
+  <section class="slits">
+
+    <a href="/blog/tech" class="slit" style="background-image:url('images/tech.jpg')">
+      <span>Technology</span>
+    </a>
+
+    <a href="/blog/design" class="slit" style="background-image:url('images/design.jpg')">
+      <span>Design</span>
+    </a>
+
+    <a href="/blog/projects" class="slit" style="background-image:url('images/projects.jpg')">
+      <span>Projects</span>
+    </a>
+
+  </section>
+
+</body>
+</html>
