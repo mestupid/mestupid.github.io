@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <!-- <link href="../style.css" rel="stylesheet"> -->
+    <link href="style.css" rel="stylesheet">
     <link rel="icon" type="image/png" href="/eli/favicon/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="/eli/favicon/favicon.svg" />
     <link rel="shortcut icon" href="/eli/favicon/favicon.ico" />
@@ -11,12 +11,97 @@
 </head>
 
 <body>
+    <div class="content">
+        <div class="center_content">
+            <p class="p_header">Eli's Web Page</p>
+            <div class="box">
+                <div class="box_icon">
+                    <img class="box_icon_img rotate linear infinite" src="images/i_1.png">
+                </div>
+                <div class="box_label">
+                    <p class="p_label">About</p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="box_icon">
+                    <img class="box_icon_img rotate linear infinite" src="images/i_2.png">
+                </div>
+                <div class="box_label">
+                    <p class="p_label">School</p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="box_icon">
+                    <img class="box_icon_img rotate linear infinite" src="images/i_3.png">
+                </div>
+                <div class="box_label">
+                    <p class="p_label">Projects</p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="box_icon">
+                    <img class="box_icon_img rotate linear infinite" src="images/i_4.png">
+                </div>
+                <div class="box_label">
+                    <p class="p_label">Hijinks</p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="box_icon">
+                    <img class="box_icon_img rotate linear infinite" src="images/i_5.png">
+                </div>
+                <div class="box_label">
+                    <p class="p_label">Saturn V</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const NORMAL = 1;
+        const FAST = 5;
+        const DURATION = 300;
 
-    <h1>Welcome 2 my page.</h1>
-    <p>
-        Here's some text <a href="..">TAKE ME BACK PLEASE</a>
-    </p>
+        function easeInOut(t) {
+            return t < 0.5
+                ? 2 * t * t
+                : 1 - Math.pow(-2 * t + 2, 2) / 2;
+        }
 
+        function tweenPlaybackRate(animation, targetRate) {
+            const startRate = animation.playbackRate;
+            const startTime = performance.now();
+
+            function tick(now) {
+                const elapsed = now - startTime;
+                const progress = Math.min(elapsed / DURATION, 1);
+                const eased = easeInOut(progress);
+
+                animation.playbackRate =
+                    startRate + (targetRate - startRate) * eased;
+
+                if (progress < 1) {
+                    requestAnimationFrame(tick);
+                }
+            }
+
+            requestAnimationFrame(tick);
+        }
+
+        document.querySelectorAll('.box').forEach(box => {
+            const img = box.querySelector('.box_icon_img');
+            const anim = img.getAnimations()[0];
+
+            if (!anim) return;
+
+            box.addEventListener('mouseenter', () => {
+                tweenPlaybackRate(anim, FAST);
+            });
+
+            box.addEventListener('mouseleave', () => {
+                tweenPlaybackRate(anim, NORMAL);
+            });
+        });
+    </script>
 </body>
 
 </html>

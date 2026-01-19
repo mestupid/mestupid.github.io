@@ -91,5 +91,6 @@ p {
 	font-family: helvText;
 	line-height: 15px;
 	margin:auto;
+	text-align:left;
 	/* text-indent: 2em; */
 }
