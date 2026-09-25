@@ -1,0 +1,23 @@
+[
+  {
+    "name": "MATH 241",
+    "instructor": "V. Stojanoska",
+    "semester": "Fall 2024",
+    "grade": "A+",
+    "description": "Gradient!!!"
+  },
+  {
+    "name": "ECE 110",
+    "instructor": "M. Choi",
+    "semester": "Fall 2024",
+    "grade": "A",
+    "description": "Gradient!!!"
+  },
+  {
+    "name": "PHYS 225",
+    "instructor": "E. Koptieva",
+    "semester": "Spring 2025",
+    "grade": "A+",
+    "description": "Lambda!!!"
+  }
+]

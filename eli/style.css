@@ -21,6 +21,11 @@
         url('fonts/fixedEx.ttf') format('truetype');
 }
 
+
+#random-picture {
+    object-fit: contain;
+}
+
 html,
 body {
     margin: 0;
@@ -58,6 +63,26 @@ a:active {
     flex-direction: column;
     /* align-items: center; */
     justify-content: center;
+}
+
+.paragraph_box {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    align-items: left;
+    justify-content:flex-start;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 2px;
+    width: 400px;
+    gap:5px;
+}
+
+.paragraph_box_row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .box {
@@ -108,7 +133,7 @@ a:active {
 }
 .p_sublabel {
     font-family:helvText;
-    font-size:10px;
+    font-size:14px;
     margin:0;
 }
 
